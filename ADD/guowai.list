@@ -5,6 +5,3 @@
 ​​# DOMAIN-SUFFIX: 22​​域名后缀规则有 22 条（例如 *.tiktok.com或 *.byteoversea.com）。
 ​​# PROCESS-NAME: 1​​进程名称规则有 1 条（例如直接匹配 TikTok应用进程）。
 DOMAIN-KEYWORD,123av
-DOMAIN-SUFFIX,123av.me
-DOMAIN-SUFFIX,123av.com
-DOMAIN-cdn.123av.me
