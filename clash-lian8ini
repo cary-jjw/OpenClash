@@ -1,0 +1,70 @@
+;1、域名组
+ruleset=✨ AC,https://raw.githubusercontent.com/cary-jjw/OpenClash/refs/heads/main/ADD/guowai.list
+ruleset=✨ GN,https://raw.githubusercontent.com/cary-jjw/OpenClash/refs/heads/main/ADD/guonei.list
+ruleset=👽 AI1,https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/AI.list
+ruleset=👽 AI2,https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/AI2.list
+ruleset=📘 GitHub,https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list
+ruleset=👯‍♂️ TikTok,https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok.list
+ruleset=🙋 Telegram,https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list
+ruleset=📀 Media-YT1,https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/YouTube.list
+ruleset=📀 Media-YT2,https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
+ruleset=📀 Media-HBO,https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HBO/HBO.list
+ruleset=📀 Media-Disney,https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.list
+ruleset=📀 Media-Netflix,https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list
+ruleset=📀 Media-Spotify,https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.list
+ruleset=🌍 国外,https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Check.list
+ruleset=🌍 国外,https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Proxy.list
+ruleset=🌍 国外,https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list
+ruleset=➡️ 国内,[]FINAL
+
+;2、策略组（域名组-节点组）
+custom_proxy_group=✨ AC`select`[]DIRECT`[]所有-自动`[]香港-自动`[]台湾-自动`[]日本-自动`[]韩国-自动`[]新加坡-自动`[]美国-自动`[]越南-自动`[]澳大利亚-自动`[]其他-自动`[]REJECT
+custom_proxy_group=✨ GN`select`[]DIRECT`[]所有-自动`[]REJECT ; 精简为直连、所有自动和拒绝
+custom_proxy_group=👽 AI1`select`[]DIRECT`[]所有-自动`[]香港-自动`[]台湾-自动`[]日本-自动`[]韩国-自动`[]新加坡-自动`[]美国-自动`[]越南-自动`[]澳大利亚-自动`[]其他-自动`[]REJECT
+custom_proxy_group=👽 AI2`select`[]DIRECT`[]所有-自动`[]香港-自动`[]台湾-自动`[]日本-自动`[]韩国-自动`[]新加坡-自动`[]美国-自动`[]越南-自动`[]澳大利亚-自动`[]其他-自动`[]REJECT
+custom_proxy_group=📘 GitHub`select`[]DIRECT`[]所有-自动`[]香港-自动`[]台湾-自动`[]日本-自动`[]韩国-自动`[]新加坡-自动`[]美国-自动`[]越南-自动`[]澳大利亚-自动`[]其他-自动`[]REJECT
+custom_proxy_group=👯‍♂️ TikTok`select`[]DIRECT`[]所有-自动`[]香港-自动`[]台湾-自动`[]日本-自动`[]韩国-自动`[]新加坡-自动`[]美国-自动`[]越南-自动`[]澳大利亚-自动`[]其他-自动`[]REJECT
+custom_proxy_group=🙋 Telegram`select`[]DIRECT`[]所有-自动`[]香港-自动`[]台湾-自动`[]日本-自动`[]韩国-自动`[]新加坡-自动`[]美国-自动`[]越南-自动`[]澳大利亚-自动`[]其他-自动`[]REJECT
+custom_proxy_group=📀 流媒体`select`[]DIRECT`[]所有-自动`[]香港-自动`[]台湾-自动`[]日本-自动`[]韩国-自动`[]新加坡-自动`[]美国-自动`[]越南-自动`[]澳大利亚-自动`[]其他-自动`[]REJECT
+custom_proxy_group=🌍 国外`select`[]DIRECT`[]所有-自动`[]香港-自动`[]台湾-自动`[]日本-自动`[]韩国-自动`[]新加坡-自动`[]美国-自动`[]越南-自动`[]澳大利亚-自动`[]其他-自动`[]REJECT
+custom_proxy_group=➡️ 国内`select`[]DIRECT`[]REJECT ;
+
+;3、节点组
+custom_proxy_group=所有-自动`url-test`(.*)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=台湾-自动`url-test`(台|台湾|台灣|TW|Tai Wan|🇹🇼|TaiWan|Taiwan)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=美国-自动`url-test`(美|美国|US|United States|🇺🇸|USA)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=澳大利亚-自动`url-test`(澳|澳大利亚|AU|Australia|🇦🇺|澳洲)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=印度-自动`url-test`(印|印度|IN|India|🇮🇳)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=立陶宛-自动`url-test`(立陶宛|LT|Lithuania|🇱🇹)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=越南-自动`url-test`(越|越南|VN|Vietnam|🇻🇳)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=香港-自动`url-test`(港|香港|HK|Hong Kong|🇭🇰)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=柬埔寨-自动`url-test`(柬埔寨|KH|Cambodia|🇰🇭)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=意大利-自动`url-test`(意|意大利|IT|Italy|🇮🇹)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=德国-自动`url-test`(德|德国|DE|Germany|🇩🇪)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=希腊-自动`url-test`(希腊|GR|Greece|🇬🇷)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=孟加拉-自动`url-test`(孟加拉|BD|Bangladesh|🇧🇩)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=加拿大-自动`url-test`(加|加拿大|CA|Canada|🇨🇦)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=日本-自动`url-test`(日|日本|JP|Japan|🇯🇵)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=智利-自动`url-test`(智利|CL|Chile|🇨🇱)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=英国-自动`url-test`(英|英国|GB|UK|United Kingdom|🇬🇧)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=印度尼西亚-自动`url-test`(印尼|印度尼西亚|ID|Indonesia|🇮🇩)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=韩国-自动`url-test`(韩|韩国|KR|South Korea|🇰🇷)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=南非-自动`url-test`(南非|ZA|South Africa|🇿🇦)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=巴西-自动`url-test`(巴西|BR|Brazil|🇧🇷)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=比利时-自动`url-test`(比利时|BE|Belgium|🇧🇪)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=以色列-自动`url-test`(以色列|IL|Israel|🇮🇱)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=乌克兰-自动`url-test`(乌克兰|UA|Ukraine|🇺🇦)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=亚美尼亚-自动`url-test`(亚美尼亚|AM|Armenia|🇦🇲)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=卢森堡-自动`url-test`(卢森堡|LU|Luxembourg|🇱🇺)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=土耳其-自动`url-test`(土耳其|TR|Turkey|🇹🇷)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=波兰-自动`url-test`(波兰|PL|Poland|🇵🇱)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=爱尔兰-自动`url-test`(爱尔兰|IE|Ireland|🇮🇪)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=荷兰-自动`url-test`(荷|荷兰|NL|Netherlands|🇳🇱)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=摩尔多瓦-自动`url-test`(摩尔多瓦|MD|Moldova|🇲🇩)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=新加坡-自动`url-test`(新|新加坡|SG|Singapore|🇸🇬)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=保加利亚-自动`url-test`(保加利亚|BG|Bulgaria|🇧🇬)`http://cp.cloudflare.com/`180,5,100
+custom_proxy_group=其他-自动`url-test`(印度|IN|India|柬埔寨|KH|Cambodia|意大利|IT|Italy|德国|DE|Germany|希腊|GR|Greece|孟加拉|BD|Bangladesh|加拿大|CA|Canada|智利|CL|Chile|英国|GB|UK|United Kingdom|印度尼西亚|ID|Indonesia|南非|ZA|South Africa|巴西|BR|Brazil|比利时|BE|Belgium|以色列|IL|Israel|乌克兰|UA|Ukraine|亚美尼亚|AM|Armenia|卢森堡|LU|Luxembourg|土耳其|TR|Turkey|波兰|PL|Poland|爱尔兰|IE|Ireland|荷兰|NL|Netherlands|摩尔多瓦|MD|Moldova|保加利亚|BG|Bulgaria|立陶宛|LT|Lithuania|未知|Other|.*?)`http://cp.cloudflare.com/`180,5,100
+
+;4、启用规则集
+enable_rule_generator=true
+overwrite_original_rules=true
