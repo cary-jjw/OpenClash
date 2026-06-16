@@ -5,24 +5,24 @@
 ​​# DOMAIN-SUFFIX: 22​​域名后缀规则有 22 条（例如 *.tiktok.com或 *.byteoversea.com）。
 ​​# PROCESS-NAME: 1​​进程名称规则有 1 条（例如直接匹配 TikTok应用进程）。
 DOMAIN-SUFFIX,123av.com
-DOMAIN-SUFFIX,instagram.com
-DOMAIN-SUFFIX,whatsapp.com
 DOMAIN-SUFFIX,Speedtest.com
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,bard.google.com
-#DOMAIN-SUFFIX,jable.tv
 DOMAIN-SUFFIX,1010520.xyz
 DOMAIN-SUFFIX,opensubtitles.com
-DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,steampowered.com
 DOMAIN-SUFFIX,docker.io
 DOMAIN-SUFFIX,docker.com
 DOMAIN-SUFFIX,x.com
 DOMAIN-SUFFIX,mushroomtrack.com
 DOMAIN-SUFFIX,fs1.app
-DOMAIN-SUFFIX,google.com
 DOMAIN-SUFFIX,mushroomtrack.com
 DOMAIN-SUFFIX,wallhaven.cc
 DOMAIN-SUFFIX,lovart.ai
 DOMAIN-SUFFIX,docker.io
 DOMAIN-SUFFIX,docker.com
+#DOMAIN-SUFFIX,instagram.com
+#DOMAIN-SUFFIX,whatsapp.com
+#DOMAIN-SUFFIX,jable.tv
+#DOMAIN-SUFFIX,github.com
+#DOMAIN-SUFFIX,gemini.google.com
+#DOMAIN-SUFFIX,bard.google.com
+#DOMAIN-SUFFIX,google.com
