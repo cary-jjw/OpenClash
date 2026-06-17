@@ -19,10 +19,10 @@ DOMAIN-SUFFIX,wallhaven.cc
 DOMAIN-SUFFIX,lovart.ai
 DOMAIN-SUFFIX,docker.io
 DOMAIN-SUFFIX,docker.com
-#DOMAIN-SUFFIX,instagram.com
-#DOMAIN-SUFFIX,whatsapp.com
-#DOMAIN-SUFFIX,jable.tv
-#DOMAIN-SUFFIX,github.com
-#DOMAIN-SUFFIX,gemini.google.com
-#DOMAIN-SUFFIX,bard.google.com
-#DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,whatsapp.com
+DOMAIN-SUFFIX,jable.tv
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,google.com
