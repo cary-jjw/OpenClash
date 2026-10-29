@@ -1,4 +1,4 @@
-# ==================== Mihomo 最终完美版配置模板 ====================
+# ==================== Mihomo 最终检查修复版配置模板 ====================
 
 port: 7890
 socks-port: 7891
@@ -34,25 +34,26 @@ dns:
 
 # ==================== 1、策略组（Proxy Groups） ====================
 proxy-groups:
-  # 🛑 关键：将最基础、自带 proxies 的组放在数组第一位（索引 [0]），彻底杜绝 proxies missing 报错
+  # 1. 国内直连组（放在数组第一位，确保不报 proxies 缺失）
   - name: ➡️ 国内
     type: select
     proxies:
       - DIRECT
       - REJECT
 
-  # --- 核心自动测速组 ---
+  # 2. 全局所有节点自动测速（作为底层节点池）
   - name: 所有-自动
     type: url-test
-    include-all: true
     filter: ".*"
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 20
 
+  # 3. 各地区自动测速组（显式通过 proxies 关联“所有-自动”，并通过 filter 筛选，绝对不会报 proxies missing）
   - name: 香港-自动
     type: url-test
-    include-all: true
+    proxies:
+      - 所有-自动
     filter: "(?i)HK|Hong|香港|港"
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -60,7 +61,8 @@ proxy-groups:
 
   - name: 台湾-自动
     type: url-test
-    include-all: true
+    proxies:
+      - 所有-自动
     filter: "(?i)TW|Taiwan|台湾|臺|台"
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -68,7 +70,8 @@ proxy-groups:
 
   - name: 日本-自动
     type: url-test
-    include-all: true
+    proxies:
+      - 所有-自动
     filter: "(?i)JP|Japan|日本|日"
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -76,7 +79,8 @@ proxy-groups:
 
   - name: 新加坡-自动
     type: url-test
-    include-all: true
+    proxies:
+      - 所有-自动
     filter: "(?i)SG|Singapore|新加坡|新"
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -84,7 +88,8 @@ proxy-groups:
 
   - name: 美国-自动
     type: url-test
-    include-all: true
+    proxies:
+      - 所有-自动
     filter: "(?i)US|United States|美国|美"
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -92,7 +97,8 @@ proxy-groups:
 
   - name: 韩国-自动
     type: url-test
-    include-all: true
+    proxies:
+      - 所有-自动
     filter: "(?i)KR|Korea|韩国|韩"
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -100,13 +106,18 @@ proxy-groups:
 
   - name: 🌍 国外
     type: url-test
-    include-all: true
-    filter: "(?i)香港|韩国|台湾|日本|新加坡|美国|马来西亚|越南|加拿大"
+    proxies:
+      - 香港-自动
+      - 台湾-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 美国-自动
+      - 韩国-自动
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 20
 
-  # --- 用户手动与分流选择组 ---
+  # 4. 用户手动与分流选择组
   - name: 🎡 AC
     type: select
     proxies:
