@@ -1,4 +1,4 @@
-# ==================== Mihomo 最终修正配置模板 ====================
+# ==================== Mihomo 最终完美版配置模板 ====================
 
 port: 7890
 socks-port: 7891
@@ -34,7 +34,14 @@ dns:
 
 # ==================== 1、策略组（Proxy Groups） ====================
 proxy-groups:
-  # 1. 核心自动测速组（直接通过 filter 匹配所有导入的节点，不依赖其他组）
+  # 🛑 关键：将最基础、自带 proxies 的组放在数组第一位（索引 [0]），彻底杜绝 proxies missing 报错
+  - name: ➡️ 国内
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+
+  # --- 核心自动测速组 ---
   - name: 所有-自动
     type: url-test
     include-all: true
@@ -99,7 +106,7 @@ proxy-groups:
     interval: 300
     tolerance: 20
 
-  # 2. 用户手动与分流选择组
+  # --- 用户手动与分流选择组 ---
   - name: 🎡 AC
     type: select
     proxies:
@@ -164,12 +171,6 @@ proxy-groups:
       - 美国-自动
       - 韩国-自动
       - 所有-自动
-      - REJECT
-
-  - name: ➡️ 国内
-    type: select
-    proxies:
-      - DIRECT
       - REJECT
 
 
